@@ -1,2 +1,2 @@
-# AR_APP
+# Augmented Reality Android App
 Simple Android app featuring Augmented reality .
