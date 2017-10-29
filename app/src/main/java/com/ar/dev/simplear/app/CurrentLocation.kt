@@ -13,7 +13,6 @@ import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListe
 import com.google.android.gms.location.LocationListener
 import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationServices
-import com.google.android.gms.maps.LocationSource.OnLocationChangedListener
 
 class CurrentLocation(private var onLocationChangedListener: OnLocationChangedListener) : ConnectionCallbacks, OnConnectionFailedListener, LocationListener {
 
@@ -41,7 +40,7 @@ class CurrentLocation(private var onLocationChangedListener: OnLocationChangedLi
 
     }
 
-    @Synchronized private fun buildGoogleApiClient(context: Context) {
+    @Synchronized fun buildGoogleApiClient(context: Context) {
         mGoogleApiClient = GoogleApiClient.Builder(context)
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)

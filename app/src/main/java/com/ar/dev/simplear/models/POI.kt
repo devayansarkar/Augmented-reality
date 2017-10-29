@@ -1,10 +1,11 @@
 package com.ar.dev.simplear.models
 
 
-class POI {
-    private var mId: Int = 0
-    private var mName: String? = null
-    private var mDescription: String? = null
-    private var mLatitude: Double = 0.toDouble()
-    private var mLongitude: Double = 0.toDouble()
+class POI(
+        var mName: String,
+        var mDescription: String,
+        var mLatitude: Double,
+        var mLongitude: Double) {
+        var mId: Int = 0
+
 }
